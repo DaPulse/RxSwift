@@ -42,12 +42,12 @@ extension Reactive where Base: UITableView {
 
      */
     public func items<S: Sequence, O: ObservableType>
-        (_ source: O)
+        (_ source: O, shouldReloadOnChange: Bool = true)
         -> (_ cellFactory: @escaping (UITableView, Int, S.Iterator.Element) -> UITableViewCell)
         -> Disposable
         where O.E == S {
             return { cellFactory in
-                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(cellFactory: cellFactory)
+                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(shouldReloadOnChange: shouldReloadOnChange, cellFactory: cellFactory)
                 return self.items(dataSource: dataSource)(source)
             }
     }
@@ -76,14 +76,14 @@ extension Reactive where Base: UITableView {
              .disposed(by: disposeBag)
     */
     public func items<S: Sequence, Cell: UITableViewCell, O : ObservableType>
-        (cellIdentifier: String, cellType: Cell.Type = Cell.self)
+        (cellIdentifier: String, cellType: Cell.Type = Cell.self, shouldReloadOnChange: Bool = true)
         -> (_ source: O)
         -> (_ configureCell: @escaping (Int, S.Iterator.Element, Cell) -> Void)
         -> Disposable
         where O.E == S {
         return { source in
             return { configureCell in
-                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S> { (tv, i, item) in
+                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(shouldReloadOnChange: shouldReloadOnChange) { (tv, i, item) in
                     let indexPath = IndexPath(item: i, section: 0)
                     let cell = tv.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! Cell
                     configureCell(i, item, cell)

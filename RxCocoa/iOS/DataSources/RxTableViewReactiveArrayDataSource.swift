@@ -45,8 +45,8 @@ class RxTableViewReactiveArrayDataSourceSequenceWrapper<S: Sequence>
     , RxTableViewDataSourceType {
     typealias Element = S
 
-    override init(cellFactory: @escaping CellFactory) {
-        super.init(cellFactory: cellFactory)
+    override init(shouldReloadOnChange: Bool, cellFactory: @escaping CellFactory) {
+        super.init(shouldReloadOnChange: shouldReloadOnChange, cellFactory: cellFactory)
     }
 
     func tableView(_ tableView: UITableView, observedEvent: Event<S>) {
@@ -64,6 +64,8 @@ class RxTableViewReactiveArrayDataSource<Element>
     typealias CellFactory = (UITableView, Int, Element) -> UITableViewCell
     
     var itemModels: [Element]? = nil
+
+    var shouldReloadOnChange: Bool = true
     
     func modelAtIndex(_ index: Int) -> Element? {
         return itemModels?[index]
@@ -79,8 +81,9 @@ class RxTableViewReactiveArrayDataSource<Element>
 
     let cellFactory: CellFactory
     
-    init(cellFactory: @escaping CellFactory) {
+    init(shouldReloadOnChange: Bool, cellFactory: @escaping CellFactory) {
         self.cellFactory = cellFactory
+        self.shouldReloadOnChange = shouldReloadOnChange
     }
     
     override func _tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -95,8 +98,10 @@ class RxTableViewReactiveArrayDataSource<Element>
     
     func tableView(_ tableView: UITableView, observedElements: [Element]) {
         self.itemModels = observedElements
-        
-        tableView.reloadData()
+
+        if shouldReloadOnChange {
+            tableView.reloadData()
+        }
     }
 }
 
