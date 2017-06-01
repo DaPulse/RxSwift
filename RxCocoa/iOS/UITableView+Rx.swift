@@ -42,15 +42,30 @@ extension Reactive where Base: UITableView {
 
      */
     public func items<S: Sequence, O: ObservableType>
-        (_ source: O, shouldReloadOnChange: Bool = true)
+        (_ source: O)
         -> (_ cellFactory: @escaping (UITableView, Int, S.Iterator.Element) -> UITableViewCell)
         -> Disposable
         where O.E == S {
             return { cellFactory in
-                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(shouldReloadOnChange: shouldReloadOnChange, cellFactory: cellFactory)
+                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(shouldReloadOnChange: true, cellFactory: cellFactory)
                 return self.items(dataSource: dataSource)(source)
             }
     }
+
+    public func items<S: Sequence, O : ObservableType>
+        (shouldReloadOnChange: Bool = true)
+        -> (_ source: O)
+        -> (_ cellFactory: @escaping (UITableView, Int, S.Iterator.Element) -> UITableViewCell)
+        -> Disposable
+        where O.E == S {
+            return { source in
+                return { cellFactory in
+                    let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(shouldReloadOnChange: shouldReloadOnChange, cellFactory: cellFactory)
+                    return self.items(dataSource: dataSource)(source)
+                }
+            }
+    }
+
 
     /**
     Binds sequences of elements to table view rows.
