@@ -22,7 +22,7 @@
 		1AF67DA71CED430100C310FA /* ReplaySubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */; };
 		1AF67DA81CED430100C310FA /* ReplaySubjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */; };
 		271A97411CFC996B00D64125 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97401CFC996B00D64125 /* UIViewController+Rx.swift */; };
-		271A97441CFC9F7B00D64125 /* UIViewControler+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97421CFC99FE00D64125 /* UIViewControler+RxTests.swift */; };
+		271A97441CFC9F7B00D64125 /* UIViewController+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */; };
 		4613456F1D9A4467001ABAF2 /* UIWebView+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */; };
 		461345711D9A4543001ABAF2 /* UIWebView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */; };
 		4613457C1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4613457B1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift */; };
@@ -80,6 +80,8 @@
 		9D71C4D21BF08191006E8F59 /* UIButton+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88254061B8A752B00B02D69 /* UIButton+Rx.swift */; };
 		AAE623761C82475700FC7801 /* UIProgressView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE623751C82475700FC7801 /* UIProgressView+Rx.swift */; };
 		AAE623771C82475700FC7801 /* UIProgressView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE623751C82475700FC7801 /* UIProgressView+Rx.swift */; };
+		B44D73EC1EE6D4A300EBFBE8 /* UIViewController+RxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */; };
+		B44D73ED1EE6D57600EBFBE8 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271A97401CFC996B00D64125 /* UIViewController+Rx.swift */; };
 		C8093CC51B8A72BE0088E94D /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8093C491B8A72BE0088E94D /* Cancelable.swift */; };
 		C8093CC61B8A72BE0088E94D /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8093C491B8A72BE0088E94D /* Cancelable.swift */; };
 		C8093CC71B8A72BE0088E94D /* AsyncLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8093C4B1B8A72BE0088E94D /* AsyncLock.swift */; };
@@ -1162,6 +1164,13 @@
 		C89CFA4F1DAABBE20079D23B /* XCTest+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1D1DAABBE20079D23B /* XCTest+Rx.swift */; };
 		C89CFA501DAABBE20079D23B /* XCTest+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1D1DAABBE20079D23B /* XCTest+Rx.swift */; };
 		C89CFA511DAABBE20079D23B /* XCTest+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89CFA1D1DAABBE20079D23B /* XCTest+Rx.swift */; };
+		C8A53AE01F09178700490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53ADF1F09178700490535 /* Completable+AndThen.swift */; };
+		C8A53AE11F09178700490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53ADF1F09178700490535 /* Completable+AndThen.swift */; };
+		C8A53AE21F09178700490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53ADF1F09178700490535 /* Completable+AndThen.swift */; };
+		C8A53AE31F09178700490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53ADF1F09178700490535 /* Completable+AndThen.swift */; };
+		C8A53AE51F09292A00490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53AE41F09292A00490535 /* Completable+AndThen.swift */; };
+		C8A53AE61F09292A00490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53AE41F09292A00490535 /* Completable+AndThen.swift */; };
+		C8A53AE71F09292A00490535 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A53AE41F09292A00490535 /* Completable+AndThen.swift */; };
 		C8A81CA01E05E82C0008DEF4 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A81C9F1E05E82C0008DEF4 /* DispatchQueue+Extensions.swift */; };
 		C8A81CA11E05E82C0008DEF4 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A81C9F1E05E82C0008DEF4 /* DispatchQueue+Extensions.swift */; };
 		C8A81CA21E05E82C0008DEF4 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A81C9F1E05E82C0008DEF4 /* DispatchQueue+Extensions.swift */; };
@@ -1666,7 +1675,7 @@
 		1AF67DA11CED420A00C310FA /* PublishSubjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishSubjectTest.swift; sourceTree = "<group>"; };
 		1AF67DA51CED430100C310FA /* ReplaySubjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaySubjectTest.swift; sourceTree = "<group>"; };
 		271A97401CFC996B00D64125 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
-		271A97421CFC99FE00D64125 /* UIViewControler+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewControler+RxTests.swift"; sourceTree = "<group>"; };
+		271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RxTests.swift"; sourceTree = "<group>"; };
 		4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+RxTests.swift"; sourceTree = "<group>"; };
 		461345701D9A4543001ABAF2 /* UIWebView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWebView+Rx.swift"; sourceTree = "<group>"; };
 		4613457B1D9A4AEE001ABAF2 /* RxWebViewDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxWebViewDelegateProxy.swift; sourceTree = "<group>"; };
@@ -2073,6 +2082,8 @@
 		C89CFA1B1DAABBE20079D23B /* TestableObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableObservable.swift; sourceTree = "<group>"; };
 		C89CFA1C1DAABBE20079D23B /* TestableObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableObserver.swift; sourceTree = "<group>"; };
 		C89CFA1D1DAABBE20079D23B /* XCTest+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Rx.swift"; sourceTree = "<group>"; };
+		C8A53ADF1F09178700490535 /* Completable+AndThen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Completable+AndThen.swift"; sourceTree = "<group>"; };
+		C8A53AE41F09292A00490535 /* Completable+AndThen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Completable+AndThen.swift"; sourceTree = "<group>"; };
 		C8A56AD71AD7424700B4673B /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A81C9F1E05E82C0008DEF4 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
 		C8A81CA51E05EAF70008DEF4 /* UIBindingObserver+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBindingObserver+Tests.swift"; sourceTree = "<group>"; };
@@ -2538,6 +2549,7 @@
 				C81A09861E6C702700900B3B /* PrimitiveSequence.swift */,
 				C89814751E75A18A0035949C /* PrimitiveSequence+Zip+arity.tt */,
 				C89814771E75A7D70035949C /* PrimitiveSequence+Zip+arity.swift */,
+				C8A53ADF1F09178700490535 /* Completable+AndThen.swift */,
 			);
 			path = Traits;
 			sourceTree = "<group>";
@@ -2642,7 +2654,7 @@
 				C8F27DAC1CE6710900D5FB4F /* UITextField+RxTests.swift */,
 				C8F27DB11CE6711600D5FB4F /* UITextView+RxTests.swift */,
 				C83508F11C38706D0027C24C /* UIView+RxTests.swift */,
-				271A97421CFC99FE00D64125 /* UIViewControler+RxTests.swift */,
+				271A97421CFC99FE00D64125 /* UIViewController+RxTests.swift */,
 				4613456E1D9A4467001ABAF2 /* UIWebView+RxTests.swift */,
 				C8A81CA51E05EAF70008DEF4 /* UIBindingObserver+Tests.swift */,
 			);
@@ -2658,6 +2670,7 @@
 				0BA9496B1E224B9C0036DD06 /* AsyncSubjectTests.swift */,
 				C83509041C38706D0027C24C /* BagTest.swift */,
 				C83509051C38706D0027C24C /* BehaviorSubjectTest.swift */,
+				C8A53AE41F09292A00490535 /* Completable+AndThen.swift */,
 				C83509061C38706D0027C24C /* CurrentThreadSchedulerTest.swift */,
 				C83509071C38706D0027C24C /* DisposableTest.swift */,
 				C822BAC51DB4048F00F98810 /* Event+Test.swift */,
@@ -4225,6 +4238,7 @@
 				C8353CE91DA19BC500BE3F5C /* TestErrors.swift in Sources */,
 				C820A9521EB4ECC000D431BC /* Observable+ToArrayTests.swift in Sources */,
 				C83509581C38706E0027C24C /* Observable+CombineLatestTests+arity.swift in Sources */,
+				C8A53AE51F09292A00490535 /* Completable+AndThen.swift in Sources */,
 				C820A99A1EB5001C00D431BC /* Observable+MergeTests.swift in Sources */,
 				C83509651C38706E0027C24C /* VirtualSchedulerTest.swift in Sources */,
 				C8C4F15D1DE9CAEE00003FA7 /* UIBarButtonItem+RxTests.swift in Sources */,
@@ -4244,7 +4258,7 @@
 				C820AA061EB5139C00D431BC /* Observable+BufferTests.swift in Sources */,
 				C820A96E1EB4F7AC00D431BC /* Observable+SequenceTests.swift in Sources */,
 				C8A9B6F41DAD752200C9B027 /* Observable+BindTests.swift in Sources */,
-				271A97441CFC9F7B00D64125 /* UIViewControler+RxTests.swift in Sources */,
+				271A97441CFC9F7B00D64125 /* UIViewController+RxTests.swift in Sources */,
 				C83509631C38706E0027C24C /* SubjectConcurrencyTest.swift in Sources */,
 				C820A9721EB4F84000D431BC /* Observable+OptionalTests.swift in Sources */,
 				84E4D3961C9B011000ADFDC9 /* UISearchController+RxTests.swift in Sources */,
@@ -4314,6 +4328,7 @@
 				C83509E11C3875500027C24C /* TestVirtualScheduler.swift in Sources */,
 				C820A94F1EB4EC3C00D431BC /* Observable+ReduceTests.swift in Sources */,
 				C8B2908A1C94D64700E923D0 /* RxTest+Controls.swift in Sources */,
+				B44D73EC1EE6D4A300EBFBE8 /* UIViewController+RxTests.swift in Sources */,
 				C820A9671EB4F39500D431BC /* Observable+SubscribeOnTests.swift in Sources */,
 				C8350A181C38756A0027C24C /* VariableTest.swift in Sources */,
 				C820A9C71EB50A4200D431BC /* Observable+SkipWhileTests.swift in Sources */,
@@ -4374,6 +4389,7 @@
 				C820A9BF1EB509B500D431BC /* Observable+TakeLastTests.swift in Sources */,
 				C820A9CB1EB50A7100D431BC /* Observable+ElementAtTests.swift in Sources */,
 				C822BACB1DB4058000F98810 /* Event+Test.swift in Sources */,
+				C8A53AE61F09292A00490535 /* Completable+AndThen.swift in Sources */,
 				C820A99B1EB5001C00D431BC /* Observable+MergeTests.swift in Sources */,
 				C8353CE71DA19BC500BE3F5C /* Recorded+Timeless.swift in Sources */,
 				C8350A161C38756A0027C24C /* QueueTests.swift in Sources */,
@@ -4530,6 +4546,7 @@
 				C820A9CC1EB50A7100D431BC /* Observable+ElementAtTests.swift in Sources */,
 				C83509D11C38752E0027C24C /* RuntimeStateSnapshot.swift in Sources */,
 				C8350A221C38756B0027C24C /* VariableTest.swift in Sources */,
+				C8A53AE71F09292A00490535 /* Completable+AndThen.swift in Sources */,
 				C83509D21C3875380027C24C /* RXObjCRuntime+Testing.m in Sources */,
 				C8353CDE1DA19BA000BE3F5C /* MessageProcessingStage.swift in Sources */,
 				C8F03F431DBB98DB00AECC4C /* Anomalies.swift in Sources */,
@@ -4651,6 +4668,7 @@
 				C85106891C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D01C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				C820A8511EB4DA5900D431BC /* Timer.swift in Sources */,
+				C8A53AE11F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C8FA89221C30424100CD3A17 /* VirtualTimeConverterType.swift in Sources */,
 				C8F03F4B1DBBAC0A00AECC4C /* DispatchQueue+Extensions.swift in Sources */,
 				C820A8E51EB4DA5A00D431BC /* Error.swift in Sources */,
@@ -4886,6 +4904,7 @@
 				C8093D791B8A72BE0088E94D /* TailRecursiveSink.swift in Sources */,
 				C8093CC71B8A72BE0088E94D /* AsyncLock.swift in Sources */,
 				C820A8501EB4DA5900D431BC /* Timer.swift in Sources */,
+				C8A53AE01F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C8F03F4A1DBBAC0A00AECC4C /* DispatchQueue+Extensions.swift in Sources */,
 				C83D73B81C1DBAEE003DC470 /* AnonymousInvocable.swift in Sources */,
 				C820A8E41EB4DA5A00D431BC /* Error.swift in Sources */,
@@ -5045,6 +5064,7 @@
 				C851068B1C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D21C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				C820A8531EB4DA5900D431BC /* Timer.swift in Sources */,
+				C8A53AE31F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C8FA89201C30424000CD3A17 /* VirtualTimeConverterType.swift in Sources */,
 				C8F03F4D1DBBAC0A00AECC4C /* DispatchQueue+Extensions.swift in Sources */,
 				C820A8E71EB4DA5A00D431BC /* Error.swift in Sources */,
@@ -5252,6 +5272,7 @@
 				D203C5081BB9C53E00D02D00 /* UIGestureRecognizer+Rx.swift in Sources */,
 				88D98F2F1CE7549A00D50457 /* RxTabBarDelegateProxy.swift in Sources */,
 				844BC8B51CE4FD7500F5C7CB /* UIPickerView+Rx.swift in Sources */,
+				B44D73ED1EE6D57600EBFBE8 /* UIViewController+Rx.swift in Sources */,
 				D203C4F61BB9C52E00D02D00 /* RxCollectionViewDataSourceType.swift in Sources */,
 				C89AB2101DAAC3350065FBE6 /* Logging.swift in Sources */,
 				88718CFF1CE5D80000D88D60 /* UITabBar+Rx.swift in Sources */,
@@ -5395,6 +5416,7 @@
 				C8B145021BD2D80100267DCE /* ImmediateScheduler.swift in Sources */,
 				C83D73C21C1DBAEE003DC470 /* InvocableType.swift in Sources */,
 				C820A8521EB4DA5900D431BC /* Timer.swift in Sources */,
+				C8A53AE21F09178700490535 /* Completable+AndThen.swift in Sources */,
 				C851068A1C2D550E0075150C /* String+Rx.swift in Sources */,
 				C8BF34D11C2E426800416CAE /* Platform.Linux.swift in Sources */,
 				C820A8E61EB4DA5A00D431BC /* Error.swift in Sources */,

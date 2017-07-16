@@ -55,6 +55,7 @@ final class AnomaliesTest_ : AnomaliesTest, RxTestCase {
 
     static var allTests: [(String, (AnomaliesTest_) -> () -> ())] { return [
     ("test936", AnomaliesTest.test936),
+    ("test1323", AnomaliesTest.test1323),
     ("testSeparationBetweenOnAndSubscriptionLocks", AnomaliesTest.testSeparationBetweenOnAndSubscriptionLocks),
     ] }
 }
@@ -157,6 +158,7 @@ final class PrimitiveSequenceTest_ : PrimitiveSequenceTest, RxTestCase {
     ("testAsCompletable_subscribeOnCompleted", PrimitiveSequenceTest.testAsCompletable_subscribeOnCompleted),
     ("testAsCompletable_subscribeOnError", PrimitiveSequenceTest.testAsCompletable_subscribeOnError),
     ("testCompletable_merge", PrimitiveSequenceTest.testCompletable_merge),
+    ("testCompletable_concat", PrimitiveSequenceTest.testCompletable_concat),
     ("testDebug_producesSingleElement", PrimitiveSequenceTest.testDebug_producesSingleElement),
     ] }
 }
@@ -448,6 +450,31 @@ final class DisposableTest_ : DisposableTest, RxTestCase {
     ("testSingleAssignmentDisposable_firstDisposedThenSet", DisposableTest.testSingleAssignmentDisposable_firstDisposedThenSet),
     ("testSingleAssignmentDisposable_firstSetThenDisposed", DisposableTest.testSingleAssignmentDisposable_firstSetThenDisposed),
     ("testSingleAssignmentDisposable_stress", DisposableTest.testSingleAssignmentDisposable_stress),
+    ] }
+}
+
+final class CompletableAndThenTest_ : CompletableAndThenTest, RxTestCase {
+    #if os(macOS)
+    required override init() {
+        super.init()
+    }
+    #endif
+
+    static var allTests: [(String, (CompletableAndThenTest_) -> () -> ())] { return [
+    ("testCompletableCompleted_CompletableCompleted", CompletableAndThenTest.testCompletableCompleted_CompletableCompleted),
+    ("testCompletableError_CompletableCompleted", CompletableAndThenTest.testCompletableError_CompletableCompleted),
+    ("testCompletableCompleted_CompletableError", CompletableAndThenTest.testCompletableCompleted_CompletableError),
+    ("testCompletableCompleted_SingleNormal", CompletableAndThenTest.testCompletableCompleted_SingleNormal),
+    ("testCompletableError_SingleNormal", CompletableAndThenTest.testCompletableError_SingleNormal),
+    ("testCompletableCompleted_SingleError", CompletableAndThenTest.testCompletableCompleted_SingleError),
+    ("testCompletableCompleted_MaybeNormal", CompletableAndThenTest.testCompletableCompleted_MaybeNormal),
+    ("testCompletableError_MaybeNormal", CompletableAndThenTest.testCompletableError_MaybeNormal),
+    ("testCompletableCompleted_MaybeError", CompletableAndThenTest.testCompletableCompleted_MaybeError),
+    ("testCompletableCompleted_MaybeEmpty", CompletableAndThenTest.testCompletableCompleted_MaybeEmpty),
+    ("testCompletableCompleted_ObservableNormal", CompletableAndThenTest.testCompletableCompleted_ObservableNormal),
+    ("testCompletableError_ObservableNormal", CompletableAndThenTest.testCompletableError_ObservableNormal),
+    ("testCompletableCompleted_ObservableError", CompletableAndThenTest.testCompletableCompleted_ObservableError),
+    ("testCompletableCompleted_ObservableEmpty", CompletableAndThenTest.testCompletableCompleted_ObservableEmpty),
     ] }
 }
 
@@ -1779,6 +1806,7 @@ func XCTMain(_ tests: [() -> ()]) {
         testCase(ObservableScanTest_.allTests),
         testCase(ReplaySubjectTest_.allTests),
         testCase(DisposableTest_.allTests),
+        testCase(CompletableAndThenTest_.allTests),
         testCase(RecursiveLockTests_.allTests),
         testCase(QueueTest_.allTests),
         testCase(ObservableSequenceTest_.allTests),
