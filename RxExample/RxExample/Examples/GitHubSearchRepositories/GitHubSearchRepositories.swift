@@ -61,6 +61,12 @@ extension GitHubSearchRepositoriesState {
 import RxSwift
 import RxCocoa
 
+struct GithubQuery: Equatable {
+    let searchText: String;
+    let shouldLoadNextPage: Bool;
+    let nextURL: URL?
+}
+
 /**
  This method contains the gist of paginated GitHub search.
  
@@ -71,11 +77,7 @@ func githubSearchRepositories(
         performSearch: @escaping (URL) -> Observable<SearchRepositoriesResponse>
     ) -> Driver<GitHubSearchRepositoriesState> {
 
-    struct GithubQuery: Equatable {
-        let searchText: String;
-        let shouldLoadNextPage: Bool;
-        let nextURL: URL?
-    }
+
 
     let searchPerformerFeedback: (Driver<GitHubSearchRepositoriesState>) -> Signal<GitHubCommand> = react(
         query: { (state) in
